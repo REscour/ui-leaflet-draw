@@ -67,7 +67,7 @@
       scope: false,
       replace: false,
       require: ['leaflet'],
-      controller: function($scope) {
+      controller: ["$scope", function($scope) {
         this._deferredDrawTool = $q.defer();
         this.getDrawTool = function() {
           return this._deferredDrawTool.promise;
@@ -75,7 +75,7 @@
         return this.getScope = function() {
           return $scope;
         };
-      },
+      ]},
       link: function(scope, element, attrs, controller) {
         var _deferred, _featureGroup, _optionsEditedInDirective, leafletScope, mapController;
         mapController = controller[0];
