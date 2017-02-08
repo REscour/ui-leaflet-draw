@@ -75,7 +75,7 @@
         return this.getScope = function() {
           return $scope;
         };
-      ]},
+      }],
       link: function(scope, element, attrs, controller) {
         var _deferred, _featureGroup, _optionsEditedInDirective, leafletScope, mapController;
         mapController = controller[0];
